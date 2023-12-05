@@ -41,24 +41,22 @@ header{
 
 section.cover-form{
     width: 100%;
-    padding: 0 2%;
 }
 
 .bg{
-    height: 500px;
+    position: relative;
+    height: 560px;
     background-position: center;
     background-size: cover;
     background-image: url(../images/solitariewolf.png);
 }
 
 .form-container{
-    float: right;
-    margin-right: 40px;
+    position: absolute;
+    right: 30px;
+    top: -2.5%;
     width: 400px;
-    height: 110%;
-    position: relative;
-    z-index: 2;
-    top: -5%;
+    height: 105%;
     box-shadow: 1px 1px 2px 1px rgb(180, 180, 180);
     background-color: white;
     border-radius: 5px;
@@ -75,7 +73,7 @@ section.cover-form{
 }
 
 .form-container form{
-    margin-top: 8px;
+    margin-top: 20px;
     padding: 15px;
 }
 
@@ -118,25 +116,91 @@ section.cover-form{
 section.chamada{
 	z-index: 1;
 	width: 100%;
-	position: relative;
-	top: -50px;
 	text-align: center;
-	display: inline-block;
 }
 
-section.chamada .container{
-    padding: 50px 0;
+section.chamada div.container{
     background-color: #348feb;
+    padding: 70px 0 50px 0;
 }
+
 
 section.chamada h2{
-	width: 96%;
+	width: 98%;
 	max-width: 700px;
 	display: inline-block;
 	color: white;
 	font-size: 24px;
 	text-transform: uppercase;
 	font-weight: normal;
+}
+
+.flex-mosaico{
+    display: flex;
+}
+
+.item-1-mosaico{
+    background-position: center;
+    background-size: cover;
+    width: 60%;
+}
+
+.item-2-mosaico{
+    background-color: rgb(19, 122, 224);
+    padding: 60px 40px;
+    width: 40%;
+}
+
+.item-2-mosaico p{
+    color: white;
+}
+
+footer{
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p{
+    margin-top: 8px;
+}
+
+footer img{
+    width: 90px;
+    border-radius: 250px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .flex-mosaico{
+        display: block;
+    }
+
+    .item-1-mosaico{
+        padding-top: 80%;
+        width: 100%;
+    }
+
+    .item-2-mosaico{
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 960px){
+
+    .bg{
+        height: auto;
+        padding: 40px 0;
+        text-align: center;
+    }
+
+    .form-container{
+        height: auto;
+        width: 96%;
+        max-width: 400px;
+        position: static;
+        display: inline-block;
+    }
 }
 
 @media screen and (max-width: 510px){
